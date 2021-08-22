@@ -1,0 +1,5 @@
+.env
+.venv
+
+client_secrets.json
+image.png
