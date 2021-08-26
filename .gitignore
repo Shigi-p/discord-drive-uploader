@@ -1,5 +1,6 @@
 .env
 .venv
+.DS_Store
 
 client_secrets.json
 image.png
