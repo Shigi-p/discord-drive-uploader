@@ -55,7 +55,7 @@ def download_img(url, file_name):
 @client.event
 async def on_message(message):
     pick = random.choice(selif)
-    pick_selif = f'{selif[2]} | {selif[0]}:{selif[1]}'
+    pick_selif = f'{pick[2]} | {pick[0]}:{pick[1]}'
 
     if message.author.bot:
         return
