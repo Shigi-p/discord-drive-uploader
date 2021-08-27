@@ -9,6 +9,7 @@ import re
 import csv
 from google_auth_oauthlib.flow import InstalledAppFlow
 import os
+import pprint
 
 load_dotenv()
 
@@ -16,6 +17,8 @@ BOT_TOKEN = os.getenv('BOT_TOKEN')
 CLIENT_SECRET_JSON = os.getenv('CLIENT_SECRET_JSON')
 GENERAL = os.getenv('GENERAL')
 TEST_DISCORD_BOT = os.getenv('TEST_DISCORD_BOT')
+
+pprint.pprint([GENERAL, TEST_DISCORD_BOT])
 
 SCOPES = [
     "https://www.googleapis.com/auth/drive.file",
@@ -54,14 +57,14 @@ def download_img(url, file_name):
 # メッセージ受信時に動作する処理
 @client.event
 async def on_message(message):
-    pick = random.choice(selif)
+    pick = random.choice(selifs)
     pick_selif = f'{pick[2]} | {pick[0]}:{pick[1]}'
 
     if message.author.bot:
         return
     if message.content == '/selif':
-        await message.channel.send(random.choice(pick_selif))
-    elif message.content and message.channel.id in [GENERAL, TEST_DISCORD_BOT]:
+        await message.channel.send(pick_selif)
+    elif message.content and message.channel.id in [int(GENERAL), int(TEST_DISCORD_BOT)]:
         if int(random.uniform(0, 100)) <= 30:
             await message.channel.send(pick_selif)
     # if message.content.startswith('/pic'):
