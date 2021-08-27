@@ -9,7 +9,6 @@ import re
 import csv
 from google_auth_oauthlib.flow import InstalledAppFlow
 import os
-import pprint
 
 load_dotenv()
 
@@ -17,8 +16,6 @@ BOT_TOKEN = os.getenv('BOT_TOKEN')
 CLIENT_SECRET_JSON = os.getenv('CLIENT_SECRET_JSON')
 GENERAL = os.getenv('GENERAL')
 TEST_DISCORD_BOT = os.getenv('TEST_DISCORD_BOT')
-
-pprint.pprint([GENERAL, TEST_DISCORD_BOT])
 
 SCOPES = [
     "https://www.googleapis.com/auth/drive.file",
