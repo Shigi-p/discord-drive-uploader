@@ -3,4 +3,5 @@
 .DS_Store
 
 client_secrets.json
-image.png
+credential.json
+selif.csv
