@@ -22,10 +22,6 @@ SCOPES = [
     "https://www.googleapis.com/auth/drive.install",
 ]
 
-# 環境変数の中身をjsonにパースしてから利用する
-# secret = json.loads(os.getenv("CLIENT_SECRET_JSON"))
-# oath_obj = InstalledAppFlow.from_client_config(secret, SCOPES)
-
 TOKEN = BOT_TOKEN
 
 selifs = []
@@ -64,20 +60,6 @@ async def on_message(message):
     elif message.content and message.channel.id in [int(GENERAL), int(TEST_DISCORD_BOT)]:
         if int(random.uniform(0, 100)) <= 30:
             await message.channel.send(pick_selif)
-    # if message.content.startswith('/pic'):
-    #     filename = message.attachments[0].filename
-    #     download_img(message.attachments[0].url, "image.png")
-
-    #     # GoogleDrive接続
-    #     gauth = GoogleAuth()
-    #     print(f"gauth = {gauth}")
-    #     gauth.CommandLineAuth()
-    #     drive = GoogleDrive(gauth)
-    #     f = drive.CreateFile({  'title': filename,
-    #                             'mimeType': 'image/jepg'
-    #     })
-    #     f.SetContentFile('image.png')
-    #     f.Upload()
 
 
 client.run(TOKEN)
