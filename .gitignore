@@ -1,7 +1,10 @@
 .env
-.venv
 .DS_Store
 
+node_modules/
 client_secrets.json
 credential.json
 selif.csv
+config.json
+yarn-error.log
+.yarn

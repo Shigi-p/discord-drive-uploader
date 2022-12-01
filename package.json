@@ -1,0 +1,19 @@
+{
+  "name": "my-discord-bot",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "repository": "git@github.com:Shigi-p/my-discord-bot.git",
+  "author": "Shigi-p <shigi.522@gmail.com>",
+  "dependencies": {
+    "discord.js": "^14.2.0"
+  },
+  "devDependencies": {
+    "csv-parse": "^5.3.3",
+    "dotenv": "^16.0.1",
+    "eslint": "^8.22.0"
+  },
+  "volta": {
+    "node": "16.14.2",
+    "yarn": "3.3.0"
+  }
+}
